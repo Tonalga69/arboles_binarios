@@ -30,7 +30,7 @@ class Arbol {
                 if(data == nodo.getValue()){
                     break;
                 }
-                if (data < nodo.getValue()) {
+                if (data > nodo.getValue()) {
                     if (nodo.getDerecha() == null) {
                         nodo.setDerecha(new Nodo(data));
                         break;
@@ -94,6 +94,17 @@ class Arbol {
     }
     public void inorden() {
         this.inorden(this.raiz);
+    }
+    public void inordenRight() {
+        this.inordenDerecha(this.raiz);
+    }
+
+    private void inordenDerecha(Nodo raiz) {
+        if (raiz != null) {
+            inordenDerecha(raiz.getDerecha());
+            raiz.imprimirDato();
+            inordenDerecha(raiz.getIzquierda());
+        }
     }
 
     public void postorden() {

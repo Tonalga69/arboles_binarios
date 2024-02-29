@@ -15,6 +15,8 @@ public class Main {
         arbol.preorden();
         System.out.println("inorden");
         arbol.inorden();
+        System.out.println("inorden derecha");
+        arbol.inordenRight();
 
 
         System.out.println("Hello world!");
